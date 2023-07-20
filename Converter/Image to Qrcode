@@ -1,0 +1,10 @@
+#code to encode qrcode
+import qrcode
+a=qrcode.make("This is very secrete code")
+a.save("C:\\Users\\dell\\Desktop\\Trupti\\Qrcode_1.png")
+
+#code to decode
+import cv2
+d=cv2.QRCodeDetector()
+val, _, _=d.detectAndDecode(cv2.imread("C:\\Users\\dell\\Desktop\\Trupti\\Qrcode_1.png"))
+print("Decoded text is : ",val)
